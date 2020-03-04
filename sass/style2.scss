@@ -365,12 +365,19 @@ h3{ font-size: var(--fs-h3); }
 
         .portafolio__img{
             transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+            max-height: 222px;
+            width: 100%;
         }
     }
 }
 .portafolio__item {
     overflow: hidden;  
     background-color: var(--clr-accent);
+    height: 222px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     
 }
 .portafolio__item:focus{
