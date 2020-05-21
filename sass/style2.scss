@@ -57,7 +57,7 @@ strong{
 }
 
 :focus{
-    outline: 3px solid var(--clr-accent);
+    outline: none;
     outline-offset: 3px;
 }
 //  Botones
@@ -363,31 +363,57 @@ h3{ font-size: var(--fs-h3); }
         max-width: 1000px;
         margin: 0 auto;
 
-        .portafolio__img{
-            transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
-            max-height: 222px;
-            width: 100%;
+        // .portafolio__img{
+        //     transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+        //     max-height: 222px;
+        //     width: 100%;
+        // }
+        .portafolio__item{
+            margin: 15px;
+            transition: .5s;
+            position: relative;
+
+            .datos{
+                background-color: black;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                font-size: 3rem;
+                font-weight: 800;
+                color: #50FCF1;
+                transition: .5s;
+            }
+        }
+        .portafolio__item:hover{
+            box-shadow: 0 0 30px 0px #50FCF1;
+        }
+        .portafolio__item:hover .datos{
+            opacity: .8;
         }
     }
 }
-.portafolio__item {
-    overflow: hidden;  
-    background-color: var(--clr-accent);
-    height: 222px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+// .portafolio__item {
+//     overflow: hidden;  
+//     background-color: var(--clr-accent);
+//     height: 222px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
     
     
-}
-.portafolio__item:focus{
-    position: relative;
-    z-index: 2;
-}
-.portafolio__img:hover, .portafolio__item:focus .portafolio__img {
-    transform: scale(1.2);
-    opacity: .5;
-}
+// }
+// .portafolio__item:focus{
+//     position: relative;
+//     z-index: 2;
+// }
+// .portafolio__img:hover, .portafolio__item:focus .portafolio__img {
+//     transform: scale(1.2);
+//     opacity: .5;
+// }
 
 // pie de página 
 .pie{
