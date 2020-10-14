@@ -8,6 +8,7 @@
 //             $(".portafolio .header").addClass('fijar')
 //     })
 // })
+console.log('Este es otro log')
 const navToggle = document.querySelector('.nav-toggle')
 const nav__links = document.querySelectorAll('.nav__link')
 // console.log(navToggle)
