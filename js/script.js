@@ -20,3 +20,4 @@ nav__links.forEach(el => {
         document.body.classList.remove('nav-open')
     })
 })
+console.log('Holi')
