@@ -125,13 +125,20 @@ h3 {
 .header {
   display: flex;
   justify-content: space-between;
+  background: #2d2d2d;
 }
 .header .logo {
   max-width: 100px;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2.5rem;
+  margin: 0px 30px 20px;
+  color: var(--clr-accent);
+  box-shadow: 0px 12px 10px -12px;
+  padding: 0 10px;
 }
 .header .nav {
   position: fixed;
-  background-color: var(--clr-dark);
+  background: url("../img/bg-1.jpg") no-repeat center/cover;
   color: var(--clr-light);
   width: 100%;
   top: 0;
@@ -162,7 +169,7 @@ h3 {
   color: var(--clr-accent);
 }
 .header .nav-toggle {
-  padding: 0.5em;
+  padding: 1.5em;
   background-color: transparent;
   border: 0;
   cursor: pointer;
@@ -198,6 +205,9 @@ h3 {
   top: 6px;
 }
 
+.nav-open {
+  overflow: hidden;
+}
 .nav-open .nav {
   transform: translateX(0);
 }
@@ -213,6 +223,7 @@ h3 {
 
 .inicio {
   position: relative;
+  height: auto;
 }
 
 .img__inicio {
@@ -225,6 +236,7 @@ h3 {
 
 @media (min-width: 600px) {
   .inicio {
+    height: 90vh;
     display: grid;
     width: min-content;
     margin: 0 auto;
@@ -293,7 +305,7 @@ h3 {
 }
 .acerca .img_acerca {
   box-shadow: var(--bs);
-  max-width: 300px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -308,6 +320,7 @@ h3 {
   }
   .acerca .seccion__titulo--acerca {
     grid-area: titulo;
+    margin-bottom: 20px;
   }
   .acerca .seccion__subtitulo--acerca {
     grid-area: subtitulo;
@@ -332,7 +345,7 @@ h3 {
 }
 .mi_trabajo .portafolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -362,6 +375,11 @@ h3 {
   opacity: 0.8;
 }
 
+@media (min-width: 600px) {
+  .portafolio {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
 .pie {
   background-color: #111;
   color: var(--clr-accent);

@@ -123,14 +123,22 @@ h3{ font-size: var(--fs-h3); }
 .header{
     display: flex;
     justify-content: space-between;
+    background: #2d2d2d;
 
     .logo{
         max-width: 100px;
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 2.5rem;
+        margin: 0px 30px 20px;
+        color: var(--clr-accent);
+        box-shadow: 0px 12px 10px -12px;
+        padding: 0 10px;
     }
 
     .nav{
         position: fixed;
-        background-color: var(--clr-dark);
+        background: url('../img/bg-1.jpg') no-repeat center/cover;
+        // background-color: var(--clr-dark);
         color: var(--clr-light);
         width: 100%;
         top: 0;
@@ -165,7 +173,7 @@ h3{ font-size: var(--fs-h3); }
         }
     }
     .nav-toggle{
-        padding: .5em;
+        padding: 1.5em;
         background-color: transparent;
         border: 0;
         cursor: pointer;
@@ -200,6 +208,7 @@ h3{ font-size: var(--fs-h3); }
     
 }
 .nav-open {
+    overflow: hidden;
     .nav{
         transform: translateX(0);
     }
@@ -220,6 +229,7 @@ h3{ font-size: var(--fs-h3); }
 
 .inicio{
     position: relative;
+    height: auto;
 }
 .img__inicio{
     box-shadow: var(--bs);
@@ -229,6 +239,7 @@ h3{ font-size: var(--fs-h3); }
 }
 @media (min-width: 600px){
     .inicio{
+        height: 90vh;
         display: grid;
         width: min-content;
         margin: 0 auto;
@@ -303,7 +314,7 @@ h3{ font-size: var(--fs-h3); }
 
     .img_acerca{
         box-shadow: var(--bs);
-        max-width: 300px;
+        max-width: 100%;
         margin: 0 auto;
     }
 }
@@ -325,6 +336,7 @@ h3{ font-size: var(--fs-h3); }
         // gap: 1rem;
         .seccion__titulo--acerca{
             grid-area: titulo;
+            margin-bottom: 20px;
         }
     
         .seccion__subtitulo--acerca{
@@ -359,7 +371,7 @@ h3{ font-size: var(--fs-h3); }
 
     .portafolio{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));  
+        grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));  
         max-width: 1000px;
         margin: 0 auto;
 
@@ -394,6 +406,11 @@ h3{ font-size: var(--fs-h3); }
         .portafolio__item:hover .datos{
             opacity: .8;
         }
+    }
+}
+@media (min-width: 600px){
+    .portafolio{
+        grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
     }
 }
 // .portafolio__item {
