@@ -365,46 +365,92 @@ h3{ font-size: var(--fs-h3); }
 
 // mi trabajo 
 .mi_trabajo{
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
     text-align: center;
 
     .portafolio{
         display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));  
+        // grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));  
+        grid-template-columns: repeat(auto-fit,minmax(270px, 300px));  
         max-width: 1000px;
         margin: 0 auto;
 
-        // .portafolio__img{
-        //     transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
-        //     max-height: 222px;
-        //     width: 100%;
-        // }
         .portafolio__item{
-            margin: 15px;
-            transition: .5s;
+            text-decoration: none;
+            color: var(--clr-dark);
+            background: white;
+            padding: 2em 5px;
             position: relative;
-
-            .datos{
-                background-color: black;
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                opacity: 0;
-                font-size: 3rem;
-                font-weight: 800;
-                color: #50FCF1;
-                transition: .5s;
+            transition: all .3s ease;
+            &:hover{
+                box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.8);
+                border-radius: 15px;
+                .s1, .s2, .s3, .s4{
+                    opacity: 0;
+                }
+                .titulo{
+                    color: var(--clr-accent);
+                }
+                .titulo::after{
+                    background: var(--clr-dark);
+                    width: 5em;
+                    left: calc(50% - 2.5em);
+                }
             }
-        }
-        .portafolio__item:hover{
-            box-shadow: 0 0 30px 0px #50FCF1;
-        }
-        .portafolio__item:hover .datos{
-            opacity: .8;
+            // border: 1px dotted #000;
+            .s1, .s2, .s3, .s4{
+                display: block;
+                position: absolute;
+                height: 1em;
+                width: 1em;
+                border: medium solid var(--clr-dark);
+                opacity: 1;
+                transition: all .3s ease-in;
+            }
+            .s1{
+                top: 0;
+                left: 0;
+                border-bottom: none;
+                border-right: none;
+            }
+            .s2{
+                top: 0;
+                right: 0;
+                border-bottom: none;
+                border-left: none;
+            }
+            .s3{
+                left: 0;
+                bottom: 0;
+                border-top: none;
+                border-right: none;
+            }
+            .s4{
+                right: 0;
+                bottom: 0;
+                border-top: none;
+                border-left: none;
+            }
+            .titulo{
+                line-height: 1.3;
+                font-size: 2rem;
+                // position: relative;
+            }
+            .titulo::after{
+                content: '';
+                display: block;
+                position: relative;
+                width: 60px;
+                height: 2px;
+                background: var(--clr-accent);
+                left: calc(50% - 30px);
+                transition: all 0.3s ease-in-out;
+            }
+            .texto{
+                padding: 1em;
+                box-sizing: border-box;
+            }
         }
     }
 }
@@ -413,24 +459,6 @@ h3{ font-size: var(--fs-h3); }
         grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
     }
 }
-// .portafolio__item {
-//     overflow: hidden;  
-//     background-color: var(--clr-accent);
-//     height: 222px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-    
-    
-// }
-// .portafolio__item:focus{
-//     position: relative;
-//     z-index: 2;
-// }
-// .portafolio__img:hover, .portafolio__item:focus .portafolio__img {
-//     transform: scale(1.2);
-//     opacity: .5;
-// }
 
 // pie de página 
 .pie{
