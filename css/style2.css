@@ -12,6 +12,7 @@
   --clr-light: #fff;
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
+  --clr-bg-opaco: #eee;
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
@@ -339,21 +340,22 @@ h3 {
   }
 }
 .mi_trabajo {
-  background-color: var(--clr-light);
+  background-color: var(--clr-bg-opaco);
   color: var(--clr-dark);
   text-align: center;
 }
 .mi_trabajo .portafolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   max-width: 1000px;
   margin: 0 auto;
 }
 .mi_trabajo .portafolio .portafolio__item {
   text-decoration: none;
   color: var(--clr-dark);
-  background: white;
+  background: var(--clr-bg-opaco);
   padding: 2em 5px;
+  margin: 15px;
   position: relative;
   transition: all 0.3s ease;
 }

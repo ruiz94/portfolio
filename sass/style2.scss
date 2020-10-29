@@ -15,6 +15,8 @@
     --clr-dark: #303030;
     --clr-accent: #16e0bd;
 
+    --clr-bg-opaco: #eee;
+
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
@@ -365,22 +367,23 @@ h3{ font-size: var(--fs-h3); }
 
 // mi trabajo 
 .mi_trabajo{
-    background-color: var(--clr-light);
+    background-color: var(--clr-bg-opaco);
     color: var(--clr-dark);
     text-align: center;
 
     .portafolio{
         display: grid;
         // grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));  
-        grid-template-columns: repeat(auto-fit,minmax(270px, 300px));  
+        grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));  
         max-width: 1000px;
         margin: 0 auto;
 
         .portafolio__item{
             text-decoration: none;
             color: var(--clr-dark);
-            background: white;
+            background: var(--clr-bg-opaco);
             padding: 2em 5px;
+            margin: 15px;
             position: relative;
             transition: all .3s ease;
             &:hover{
