@@ -12,6 +12,7 @@
   --clr-light: #fff;
   --clr-dark: #303030;
   --clr-accent: #16e0bd;
+  --clr-accent-opaco: #16e0bd26;
   --clr-bg-opaco: #eee;
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -67,11 +68,15 @@ strong {
   text-transform: uppercase;
   letter-spacing: 2;
   font-weight: var(--fw-bold);
-  transition: transform 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  border: medium solid transparent;
 }
 
 .btn:hover {
-  transform: scale(1.1);
+  background: var(--clr-accent-opaco);
+  color: var(--clr-light);
+  border-color: var(--clr-accent);
+  border-radius: 3px;
 }
 
 h1,
@@ -271,6 +276,8 @@ h3 {
   background-blend-mode: multiply;
   color: var(--clr-light);
   text-align: center;
+  background-attachment: fixed;
+  background-position: center center;
 }
 .mis_servicios .seccion__titulo--servicios {
   position: relative;
@@ -339,6 +346,63 @@ h3 {
     z-index: 2;
   }
 }
+.seccion__habilidades {
+  background: var(--clr-dark);
+  color: var(--clr-bg-opaco);
+  text-align: center;
+}
+.seccion__habilidades .tarjetones {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 300px);
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 2em;
+}
+.seccion__habilidades .tarjetones .tarjeton {
+  background: var(--clr-dark);
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: start;
+  margin: 15px 20px;
+  border-radius: 15px;
+}
+.seccion__habilidades .tarjetones .tarjeton ul {
+  font-size: 1.2rem;
+  list-style: none;
+  padding: 0;
+  margin-left: 10px;
+}
+.seccion__habilidades .tarjetones .tarjeton ul.ul_top {
+  margin-left: 30px;
+}
+.seccion__habilidades .tarjetones .tarjeton ul li::before {
+  content: "-";
+  padding-right: 8px;
+}
+.seccion__habilidades .tarjetones .tarjeton h3 {
+  text-align: center;
+  font-size: 2rem;
+}
+.seccion__habilidades .tarjetones .tarjeton.backend {
+  box-shadow: 0 0 25px -3px rgba(205, 179, 12, 0.5);
+}
+.seccion__habilidades .tarjetones .tarjeton.backend h3, .seccion__habilidades .tarjetones .tarjeton.backend ul li::before {
+  color: #cdb30c;
+}
+.seccion__habilidades .tarjetones .tarjeton.frontend {
+  box-shadow: 0 0 25px -3px rgba(40, 223, 153, 0.5);
+}
+.seccion__habilidades .tarjetones .tarjeton.frontend h3, .seccion__habilidades .tarjetones .tarjeton.frontend ul li::before {
+  color: #28df99;
+}
+.seccion__habilidades .tarjetones .tarjeton.herramientas {
+  box-shadow: 0 0 25px -3px rgba(255, 66, 79, 0.5);
+}
+.seccion__habilidades .tarjetones .tarjeton.herramientas h3, .seccion__habilidades .tarjetones .tarjeton.herramientas ul li::before {
+  color: #ff424f;
+}
+
 .mi_trabajo {
   background-color: var(--clr-bg-opaco);
   color: var(--clr-dark);
