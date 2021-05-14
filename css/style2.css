@@ -26,8 +26,8 @@
   :root {
     --fs-h1: 4.5rem;
     --fs-h2: 3.75rem;
-    --fs-h3: 1.5rem;
-    --fs-body: 1.125rem;
+    --fs-h3: 2rem;
+    --fs-body: 1.225rem;
   }
 }
 body {
@@ -144,7 +144,7 @@ h3 {
 }
 .header .nav {
   position: fixed;
-  background: url("../img/bg-1.jpg") no-repeat center/cover;
+  background-color: rgba(0, 0, 0, 0.7);
   color: var(--clr-light);
   width: 100%;
   top: 0;
@@ -176,13 +176,17 @@ h3 {
 }
 .header .nav-toggle {
   padding: 1.5em;
-  background-color: transparent;
+  background-color: #2d2d2d;
   border: 0;
   cursor: pointer;
   position: absolute;
   right: 1em;
   top: 1em;
   z-index: 1000;
+  height: 66px;
+  position: fixed;
+  top: 10px;
+  border-radius: 50%;
 }
 .header .nav-toggle .hamburguesa {
   display: block;
@@ -225,6 +229,9 @@ h3 {
 }
 .nav-open .hamburguesa::after {
   opacity: 0;
+}
+.nav-open section {
+  filter: blur(10px);
 }
 
 .inicio {
@@ -278,6 +285,11 @@ h3 {
   text-align: center;
   background-attachment: fixed;
   background-position: center center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .mis_servicios .seccion__titulo--servicios {
   position: relative;
@@ -295,6 +307,7 @@ h3 {
 .mis_servicios .servicio {
   max-width: 500px;
   margin: 0 auto;
+  width: 300px;
 }
 .mis_servicios .servicios {
   margin-bottom: 4em;
@@ -303,12 +316,13 @@ h3 {
 @media (min-width: 800px) {
   .servicios {
     display: flex;
-    max-width: 1000px;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .servicios > .servicio {
     margin-left: 2em;
+    margin: 0;
   }
 }
 .acerca .img_acerca {
@@ -350,14 +364,16 @@ h3 {
   background: var(--clr-dark);
   color: var(--clr-bg-opaco);
   text-align: center;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
 }
 .seccion__habilidades .tarjetones {
-  display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 300px);
-  max-width: 1000px;
   margin: auto;
   padding-top: 2em;
+  flex-wrap: wrap;
+  display: flex;
 }
 .seccion__habilidades .tarjetones .tarjeton {
   background: var(--clr-dark);
@@ -366,6 +382,8 @@ h3 {
   text-align: start;
   margin: 15px 20px;
   border-radius: 15px;
+  box-shadow: 0 0 25px -3px rgba(255, 255, 255, 0.24);
+  width: 250px;
 }
 .seccion__habilidades .tarjetones .tarjeton ul {
   font-size: 1.2rem;
@@ -384,25 +402,21 @@ h3 {
   text-align: center;
   font-size: 2rem;
 }
-.seccion__habilidades .tarjetones .tarjeton.backend {
-  box-shadow: 0 0 25px -3px rgba(205, 179, 12, 0.5);
-}
 .seccion__habilidades .tarjetones .tarjeton.backend h3, .seccion__habilidades .tarjetones .tarjeton.backend ul li::before {
   color: #cdb30c;
 }
-.seccion__habilidades .tarjetones .tarjeton.frontend {
-  box-shadow: 0 0 25px -3px rgba(40, 223, 153, 0.5);
-}
 .seccion__habilidades .tarjetones .tarjeton.frontend h3, .seccion__habilidades .tarjetones .tarjeton.frontend ul li::before {
   color: #28df99;
-}
-.seccion__habilidades .tarjetones .tarjeton.herramientas {
-  box-shadow: 0 0 25px -3px rgba(255, 66, 79, 0.5);
 }
 .seccion__habilidades .tarjetones .tarjeton.herramientas h3, .seccion__habilidades .tarjetones .tarjeton.herramientas ul li::before {
   color: #ff424f;
 }
 
+@media (max-width: 1000px) {
+  .seccion__habilidades {
+    height: auto;
+  }
+}
 .mi_trabajo {
   background-color: var(--clr-bg-opaco);
   color: var(--clr-dark);
