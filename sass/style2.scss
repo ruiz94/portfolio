@@ -399,18 +399,25 @@ h3{ font-size: var(--fs-h3); }
     height: 80vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+
+    .seccion__titulo, .seccion__subtitulo, .tarjetones{
+        position: relative;
+    }
     .tarjetones{
         // display: grid;
         justify-content: center;
         // grid-template-columns: repeat(auto-fit, 300px);
         // width: 1000px;
+        
         margin: auto;
         padding-top: 2em;
         flex-wrap: wrap;
         display: flex;
 
         .tarjeton{
-            background: var(--clr-dark);
+            background: rgba(48 ,48 ,48, 0.8);
             // box-shadow: 0 0 20px -10px rgba(255, 255, 255, .5);
             padding: 20px;
             box-sizing: border-box;
@@ -442,21 +449,24 @@ h3{ font-size: var(--fs-h3); }
             // &.backend{
             //     box-shadow: 0 0 25px -3px rgba(205, 179, 12, .5);
             // }
-            &.backend h3, &.backend ul li::before{
+            & h3, & ul li::before{
                 color: #cdb30c;
             }
+            // &.backend h3, &.backend ul li::before{
+            //     color: #cdb30c;
+            // }
             // &.frontend{
             //     box-shadow: 0 0 25px -3px rgba(40, 223, 153, .5);
             // }
-            &.frontend h3, &.frontend ul li::before{
-                color: #28df99;
-            }
+            // &.frontend h3, &.frontend ul li::before{
+            //     color: #28df99;
+            // }
             // &.herramientas{
             //     box-shadow: 0 0 25px -3px rgba(255, 66, 79, .5);
             // }
-            &.herramientas h3, &.herramientas ul li::before{
-                color: rgb(255, 66, 79);
-            }
+            // &.herramientas h3, &.herramientas ul li::before{
+            //     color: rgb(255, 66, 79);
+            // }
 
             // tarjetones detrs
             // .tarjeton__contenido{
@@ -492,6 +502,12 @@ h3{ font-size: var(--fs-h3); }
             // }
             
         }
+    }
+    .fondo_tecnologias{
+        position: absolute;
+        top: -778px;
+        left: 0;
+        filter: opacity(0.3);
     }
 }
 @media (max-width: 1000px){
@@ -590,6 +606,32 @@ h3{ font-size: var(--fs-h3); }
                 box-sizing: border-box;
             }
         }
+        .portafolio__item div i{
+            font-size: 1.5rem;
+        }
+        .fa-js-square{
+            color: #F0DB4F;
+        }
+        .fa-css3-alt{
+            color: #2565AE;
+        }
+        .fa-react{
+            color: #61DBFB;
+        }
+        .fa-sass{
+            color: #CD6799;
+        }
+        .fa-html5{
+            color: #E44D26;
+        }
+        .fa-github{
+            color: #211F1F;
+        }
+        .fa-heroku{
+            width: 30px;
+            height: 25px;
+            display: inline-flex;
+        }
     }
 }
 @media (min-width: 600px){
@@ -627,5 +669,11 @@ h3{ font-size: var(--fs-h3); }
         .rede__social__item{
             margin: 0 1.5em;
         }
+    }
+    .fa-facebook-square{
+        color: #00C6FF;
+    }
+    li a img{
+        width: 50px;
     }
 }

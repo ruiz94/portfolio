@@ -367,6 +367,11 @@ h3 {
   height: 80vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.seccion__habilidades .seccion__titulo, .seccion__habilidades .seccion__subtitulo, .seccion__habilidades .tarjetones {
+  position: relative;
 }
 .seccion__habilidades .tarjetones {
   justify-content: center;
@@ -376,7 +381,7 @@ h3 {
   display: flex;
 }
 .seccion__habilidades .tarjetones .tarjeton {
-  background: var(--clr-dark);
+  background: rgba(48, 48, 48, 0.8);
   padding: 20px;
   box-sizing: border-box;
   text-align: start;
@@ -402,14 +407,14 @@ h3 {
   text-align: center;
   font-size: 2rem;
 }
-.seccion__habilidades .tarjetones .tarjeton.backend h3, .seccion__habilidades .tarjetones .tarjeton.backend ul li::before {
+.seccion__habilidades .tarjetones .tarjeton h3, .seccion__habilidades .tarjetones .tarjeton ul li::before {
   color: #cdb30c;
 }
-.seccion__habilidades .tarjetones .tarjeton.frontend h3, .seccion__habilidades .tarjetones .tarjeton.frontend ul li::before {
-  color: #28df99;
-}
-.seccion__habilidades .tarjetones .tarjeton.herramientas h3, .seccion__habilidades .tarjetones .tarjeton.herramientas ul li::before {
-  color: #ff424f;
+.seccion__habilidades .fondo_tecnologias {
+  position: absolute;
+  top: -778px;
+  left: 0;
+  filter: opacity(0.3);
 }
 
 @media (max-width: 1000px) {
@@ -503,6 +508,32 @@ h3 {
   padding: 1em;
   box-sizing: border-box;
 }
+.mi_trabajo .portafolio .portafolio__item div i {
+  font-size: 1.5rem;
+}
+.mi_trabajo .portafolio .fa-js-square {
+  color: #F0DB4F;
+}
+.mi_trabajo .portafolio .fa-css3-alt {
+  color: #2565AE;
+}
+.mi_trabajo .portafolio .fa-react {
+  color: #61DBFB;
+}
+.mi_trabajo .portafolio .fa-sass {
+  color: #CD6799;
+}
+.mi_trabajo .portafolio .fa-html5 {
+  color: #E44D26;
+}
+.mi_trabajo .portafolio .fa-github {
+  color: #211F1F;
+}
+.mi_trabajo .portafolio .fa-heroku {
+  width: 30px;
+  height: 25px;
+  display: inline-flex;
+}
 
 @media (min-width: 600px) {
   .portafolio {
@@ -536,6 +567,12 @@ h3 {
 }
 .pie .redes__sociales__lista .rede__social__item {
   margin: 0 1.5em;
+}
+.pie .fa-facebook-square {
+  color: #00C6FF;
+}
+.pie li a img {
+  width: 50px;
 }
 
 /*# sourceMappingURL=style2.css.map */
